@@ -86,7 +86,7 @@ description = 'A floating-point number represented in Python by a float instance
 
 [[snippets]]
 prefix = 'foreign_key'
-body = 'models.ForeignKey("${1:app}.${2:Model}", verbose_name=_(""), on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})'
+body = 'models.ForeignKey('${1|wagtailcore}.${2|Page}', verbose_name=_(""), on_delete=models.${3|CASCADE,PROTECT,SET_NULL,SET_DEFAULT,SET(),DO_NOTHING|})'
 detail = 'models.ForeignKey()'
 description = 'ForeignKey (fk).\n\nA many-to-one relationship.\n\non_delete will become a required argument in Django 2.0. In older versions it defaults to CASCADE.\n\n'
 
